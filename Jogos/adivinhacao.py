@@ -4,16 +4,20 @@ print("******************************")
 
 num_secret = 42
 
-chute =  int(input("Digite o seu numero: "))
+chute = int(input("Digite o seu numero: "))
 
 print("Voce digitou ", chute)
-print(type(chute))
-print(type(num_secret))
 
-
-if(num_secret == chute):
+acertou = chute == num_secret
+isMaior = chute > num_secret
+isMenor = chute < num_secret
+if(acertou):
     print("Voce acertou!")
 else:
-    print("Voce errou!")
+    if(isMaior):
+        print("Voce errou! O seu chute foi maior do que o numero secreto")
+    elif(isMenor):
+        print("Voce errou! O seu chute foi menor do que o numero secreto")
+
 
 print("Fim Jogo")
