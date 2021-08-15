@@ -1,4 +1,13 @@
-# print("Ola", "QUE", sep="/", end="\n+")
+print("Ola", "QUE", sep="/", end="\n+")
+
+
+num1 = 21
+num2 = 32
+
+num3 = abs(num1 - num2) / 3
+
+print(round(num3))
+print(3//2)
 
 nome = 'Luan'
 print(f'Meu nome é {nome.lower()}')
@@ -16,30 +25,30 @@ print("R$ {:7d}".format(25))
 print("Data {:02d}/{:02d}".format(5,11))
 print("Data {:02d}/{:02d}/{:02d}".format(19,11,1998))
 
-# for rodada in range(1, 10):
-#     print(rodada)
+for rodada in range(1, 10):
+    print(rodada)
 
 
-# for rodada in range(1, 10, 2):
-#     print(rodada)
+for rodada in range(1, 10, 2):
+    print(rodada)
 
-# dia_ini = 24
-# dia_fim = 28
-# mes = "fevereiro"
-# ano = 2017
-
-
-# print("Em {} o Carnaval acontece em {} do dia {} até o dia {}".format(
-#     ano, mes, dia_ini, dia_fim))
+dia_ini = 24
+dia_fim = 28
+mes = "fevereiro"
+ano = 2017
 
 
-# usuario = input("Informe o usuário do sistema!")
+print("Em {} o Carnaval acontece em {} do dia {} até o dia {}".format(
+    ano, mes, dia_ini, dia_fim))
 
-# if(usuario == "Flávio"):
-#     print("Seja bem-vindo Flávio!")
-# elif(usuario == "Douglas"):
-#     print("Seja bem-vindo Douglas!")
-# elif(usuario == "Nico"):
-#     print("Seja bem-vindo Nico")
-# else:
-#     print("Usuário não identificado!")
+
+usuario = input("Informe o usuário do sistema!")
+
+if(usuario == "Flávio"):
+    print("Seja bem-vindo Flávio!")
+elif(usuario == "Douglas"):
+    print("Seja bem-vindo Douglas!")
+elif(usuario == "Nico"):
+    print("Seja bem-vindo Nico")
+else:
+    print("Usuário não identificado!")
