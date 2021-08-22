@@ -1,31 +1,41 @@
 # print("Ola", "QUE", sep="/", end="\n+")
 
 
-arquivo = open("nome_do_arquivo.txt", "m")
-arquivo.close()
-arquivo = open("nome_do_arquivo.txt", "a")
-arquivo.readline()
+numero = 123
+titular = "Luan"
+saldo = 155.00
+limite = 1500.0
 
-for linha in arquivo:
-    print(linha)
-arquivo.close()
-palavra = "teste"
+conta = {"numero": numero, "titular": titular,
+         "saldo": saldo, "limite": limite}
+conta["titular"]
+
+
+# arquivo = open("nome_do_arquivo.txt", "m")
+# arquivo.close()
+# arquivo = open("nome_do_arquivo.txt", "a")
+# arquivo.readline()
+
+# for linha in arquivo:
+#     print(linha)
+# arquivo.close()
+# palavra = "teste"
 # palavra2 = palavra.capitalize().strip().lower()
 # palavra.endswith("te")  # true
 # palavra.strip()
-listaT = [1, 5, 8, 9, 6, "teste"]
-listaT.append(8)
-len(listaT)
-dias = ("S", "T", "Q", "Q", "S", "S", "D",)  # tuple
+# listaT = [1, 5, 8, 9, 6, "teste"]
+# listaT.append(8)
+# len(listaT)
+# dias = ("S", "T", "Q", "Q", "S", "S", "D",)  # tuple
 
-p1 = (3, 5)
-p2 = (110, 8)
-p3 = (58, 9)
+# p1 = (3, 5)
+# p2 = (110, 8)
+# p3 = (58, 9)
 
-line = [p1, p2, p3]
-line[0][0][0]
+# line = [p1, p2, p3]
+# line[0][0][0]
 
-lista = ["_" for letra in palavra]
+# lista = ["_" for letra in palavra]
 
 # precos = [1525, 1120, 1464, 1200, 1330, 1356, 1312, 1531, 1232, 1234, 1250, 1114, 1553, 1147, 1303, 1296, 1309, 1404, 1479, 1376, 1152, 1440, 1038, 1018,
 #           1291, 1388, 1577, 1115, 1488, 1494, 1254, 1230, 1122, 1396, 1208, 1356, 1549, 1116, 1443, 1075, 1536, 1542, 1036, 1015, 1020, 1217, 1484, 1032, 1390, 1026]
