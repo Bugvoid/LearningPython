@@ -1,5 +1,5 @@
+# from datas import Data
 # print("Ola", "QUE", sep="/", end="\n+")
-
 
 numero = 123
 titular = "Luan"
