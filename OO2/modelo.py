@@ -1,3 +1,21 @@
+from abc import ABC  # abstract class
+from collections.abc import MutableSequence
+from numbers import Complex
+
+
+class Playlist(MutableSequence):
+    pass
+
+
+class Numero(Complex):
+    def __getitem__(self,item):
+      super().__getitem__(item)
+
+
+filmes = Playlist()
+filmes = Numero()
+
+
 class Programa:
     def __init__(self, nome, ano):
         self._nome = nome.title()
@@ -41,11 +59,40 @@ class Serie(Programa):
         return f"Nome: {self._nome} -  {self.ano} - {self.temporadas} temp - Like: {self._likes}"
 
 
+class Playlist:
+    def __init__(self, nome, programas):
+        self.nome = nome
+        self._programas = programas
+
+    def __getitem__(self, item):
+        return self._programas[item]
+
+    @property
+    def listagem(self):
+        return self._programas
+
+    def __len__(self):
+        return len(self._programas)
+
+    # def tamanho(self):
+    #     return len(self.programas)
+
+
 vingadores = Filme("vingadores - ultimato", 2019, 240)
 finalSpace = Serie("Final Space", 2020, 3)
+endgame = Filme("Endgame", 2018, 200)
+onepiece = Serie("One Piece", 1997, 30)
 
 vingadores.dar_like()
 vingadores.dar_like()
+endgame.dar_like()
+endgame.dar_like()
+endgame.dar_like()
+onepiece.dar_like()
+onepiece.dar_like()
+onepiece.dar_like()
+onepiece.dar_like()
+onepiece.dar_like()
 finalSpace.dar_like()
 
 # print(f"Nome: {vingadores.nome} - Like: {vingadores.likes}")
@@ -53,9 +100,13 @@ finalSpace.dar_like()
 # print(f"Nome: {finalSpace.nome} - Like: {finalSpace.likes}")
 
 
-filmes_e_series = [vingadores, finalSpace]
+filmes_e_series = [vingadores, finalSpace, endgame, onepiece]
+fim_de_semana = Playlist("Fim de Semana", filmes_e_series)
 
-for programa in filmes_e_series:
+print(f"Tamanho do playlist: {len(fim_de_semana)}")
+
+
+for programa in fim_de_semana:
     # if hasattr(programa, "duracao"):
     #     detalhes = programa.duracao
     # else:
@@ -63,3 +114,5 @@ for programa in filmes_e_series:
     # print(f"{programa.nome} - {detalhes} D - {programa.likes}")
     # programa.imprime()
     print(programa)
+
+# print(f"Ta ou não Tá? {endgame in fim_de_semana}")
